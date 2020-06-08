@@ -1,0 +1,24 @@
+/* 4の倍数＋1枚目のスライドの高さ（1枚目、5枚目…） */
+.swiper-slide:nth-child(4n+1) {
+	height           : 350px;
+  background-image : url('kintore1.jpg');
+  background-size  :cover;   
+}
+/* 4の倍数＋2枚目のスライドの高さ（2枚目、6枚目…） */
+.swiper-slide:nth-child(4n+2) {
+	height           : 350px;
+  background-image : url('kintore2.jpg');
+  background-size  :cover;   
+}
+/* 4の倍数＋3枚目のスライドの高さ（3枚目、7枚目…） */
+.swiper-slide:nth-child(4n+3) {
+	height           : 350px;
+  background-image : url('kintore3.jpg');
+  background-size  :cover;   
+}
+/* 4の倍数＋4枚目のスライドの高さ（4枚目、8枚目…） */
+.swiper-slide:nth-child(4n+4) {
+	height           : 350px;
+  background-image : url('kintore4.jpg');
+  background-size  :cover;   
+}
