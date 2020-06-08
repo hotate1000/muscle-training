@@ -1,24 +1,14 @@
-
-
--# %header
 .index-header
   .index-header__box
     .index-header__box__left
-      te
+      肉体改造！！
     .index-header__box__center
     .index-header__box__right   
 .index-main
--#   コンテンツ
-    
--# %footer
--#   フッター
+
+.index-footer
 
 :javascript
-  // alert("hello world!");
-  // $(function() {
-  // $("h1").css("color", "green");
-  // });
-
   $(function() {
     $(window).on('load scroll', function() {
       // ページ読み込み時とスクロール時に発火させる。
@@ -27,10 +17,8 @@
       if ( scrollPos > 100 ) {
         // もしスクロールした位置が100pxより大きければ
         $('.index-header').addClass('index-header-resize');
-          // 上記条件が正の場合
       } else {
         $('.index-header').removeClass('index-header-resize');
-          // 上記条件が非の場合
       }
     });
   });	

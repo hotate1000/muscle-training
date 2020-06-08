@@ -1,49 +1,39 @@
-// .index-header{
-//   background-color: red;
-//   padding:60px 200px;
-//   transition: .3s;
-//   position: fixed;
-//   width: 100%;
+.index-header{
+  position        : fixed;
+  padding         : 60px 200px;
+  width           : 100%;
+  font-size       : 30px;
+  text-align      : center;
+  color           : black;
+  background-color: rgba(255,255,255,0.5);
+  transition      : .5s;
+  font-family     : 'ヒラギノ丸ゴ ProN W4';
+  &__box{
+    &__left{
 
-//   &__box{
-//     &__left{
+    }
+    &__center{
 
-//     }
-//     &__center{
+    }
+    &__right{
 
-//     }
-//     &__right{
-
-//     }   
-//   }
-// }
-
-
-
-.index-header {
-	position: fixed;
-	padding: 60px 0;
-	width: 100%;
-	font-size: 2em;
-	text-align: center;
-	color: #fff;
-	background-color: #000;
-  transition: .3s;
-  // margin-bottom: 500px;
+    }   
+  }
 }
+.index-header-resize {
+  padding   : 30px 200px;
+  font-size : 15px;
+}
+
 .index-main {
 	height: 2000px;
 	text-align: center;
   background-color: gold;
   
 }
-footer {
+.index-footer {
 	padding: 30px 0;
 	text-align: center;
 	color: #fff;
 	background-color: #000;
-}
-.index-header-resize {
-	padding: 2em 0;
-	font-size: 1em;
 }
