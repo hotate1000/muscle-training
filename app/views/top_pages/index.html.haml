@@ -6,8 +6,8 @@
     .index-header__box__right
 
 .index-main
-  = render "swiper"
-
+  = render 'swiper'
+  = render 'index-main'
 .index-footer
 
 
@@ -18,7 +18,7 @@
       // ページ読み込み時とスクロール時に発火させる。
       var scrollPos = $(this).scrollTop();
       // ブラウザ画面のスクロールした位置（スクロール量）を取得し変数に代入する。
-      if ( scrollPos > 10 ) {
+      if ( scrollPos > 30 ) {
         // もしスクロールした位置が100pxより大きければ
         $('.index-header').addClass('index-header-resize');
       } else {

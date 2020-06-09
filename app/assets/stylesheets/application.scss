@@ -1,8 +1,10 @@
 @import "reset";
 @import "top_pages/index.scss";
+@import "top_pages/index-main.scss";
 @import "top_pages/swiper.scss";
 
 * {
   box-sizing: border-box;
 }
 // paddingなどの設定を行った場合、その要素全体のサイズを大きくしないように設定。
+

@@ -1,0 +1,42 @@
+.index-main__muscle-explanation {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0px 20px 20px;
+
+  &__letterbox {
+    width: 50%;
+    min-width: 600px;
+
+    &__letter-top {
+      .letterbox-top {
+        font-size: 20px;
+        color: white;
+        text-align: left;
+      }
+      
+    }
+    &__letter-center {
+      .letterbox-center {
+        padding: 0 8px;
+        // font-size: 20px;
+        color: white;
+        text-align: left;
+
+      }
+
+    }
+
+  }
+
+  &__equipment-photobox {
+    width: 45%;
+    
+    &__photos {
+      height: 350px;
+      width: 100%;
+      background: linear-gradient(-50deg, rgba(30, 45, 255, 0.1), rgba(250, 28, 28, 0.1)),url('kintore1.jpg');
+      z-index: 2;
+      background-size  :cover;  
+    }
+  }
+}
