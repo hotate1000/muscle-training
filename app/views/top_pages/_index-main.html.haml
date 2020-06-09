@@ -9,6 +9,28 @@
       %p.letterbox-center 
         メリットは「代謝の促進」「ストレスの耐性の向上」「体力の向上」などなど健康的な生活を意地することを助けてくれる効果があります。
   .index-main__muscle-explanation__equipment-photobox
-    .index-main__muscle-explanation__equipment-photobox__photos
+    .index-main__muscle-explanation__equipment-photobox__photos.fadein
       -# = image_tag 'kintore1', alt: '', height: '200px', width: '90%', class: ''
-    aa
+      -# = image_tag 'kintore1', alt: '', height: '200px', width: '90%', class: 'fadein'
+
+
+:javascript
+  $(function(){
+    $(window).scroll(function (){
+    // スクロール時に反応する
+        $('.fadein').each(function(){
+        // .fadein要素1つずつに順番に処理を行う
+          var position = $(this).offset().top;
+          // offset().topで、ページの最上部から「.fadein」が付いた要素までの距離を取得して、変数positionに代入
+          var scroll = $(window).scrollTop();
+          // スクロースした量を取得する
+          var windowHeight = $(window).height();
+          // .height()で、ウィンドウの高さを取得して、変数windowHeightに代入
+          if (scroll > position - windowHeight + 250){
+          // スクロール量が、「ページ最上部から要素までの距離」-「ウィンドウの高さ」を超えた時、つまりスクロール量が
+          // 要素の位置を過ぎた瞬間、「.fadein」が付いた要素にactiveクラスが付く。
+            $(this).addClass('active');
+          }
+        });
+    });
+  });
