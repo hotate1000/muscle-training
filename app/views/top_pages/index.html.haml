@@ -1,4 +1,4 @@
-.index-header
+.index-header#index-header
   .index-header__box
     .index-header__box__left
       肉体改造！！
@@ -8,8 +8,9 @@
 .index-main
   = render "swiper"
 
-
 .index-footer
+
+
 
 :javascript
   $(function() {
@@ -17,7 +18,7 @@
       // ページ読み込み時とスクロール時に発火させる。
       var scrollPos = $(this).scrollTop();
       // ブラウザ画面のスクロールした位置（スクロール量）を取得し変数に代入する。
-      if ( scrollPos > 100 ) {
+      if ( scrollPos > 10 ) {
         // もしスクロールした位置が100pxより大きければ
         $('.index-header').addClass('index-header-resize');
       } else {
