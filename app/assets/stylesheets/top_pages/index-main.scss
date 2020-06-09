@@ -1,3 +1,11 @@
+@mixin text-form() {
+  color: white;
+  text-align: left;
+  font-family: "Sawarabi Mincho";
+  letter-spacing: 4px;
+}
+
+
 .index-main__muscle-explanation {
   display: flex;
   justify-content: space-between;
@@ -10,30 +18,21 @@
 
     &__letter-top {
       .letterbox-top {
-        font-size: 20px;
-        color: white;
-        text-align: left;
-        // line-height: 3px;
-        font-family: "Sawarabi Mincho";
-        letter-spacing: 5px;
+      // 説明欄タイト
+        @include text-form();
+        letter-spacing: 4px;
         padding-bottom: 7px;
       }
       
     }
     &__letter-center {
       .letterbox-center {
+      // 説明蘭説明文
+        @include text-form();
         padding: 0 8px;
-        // font-size: 20px;
-        color: white;
-        text-align: left;
         line-height: 27px;
-        font-family: "Sawarabi Mincho";
-        letter-spacing: 5px;
-
       }
-
     }
-
   }
 
   &__equipment-photobox {
