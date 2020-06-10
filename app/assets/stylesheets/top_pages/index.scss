@@ -12,7 +12,7 @@ body{
   background-color : rgba(255,255,255,0.7);
   transition       : .5s;
   font-family      : 'ヒラギノ丸ゴ ProN W4';
-  z-index: 2;
+  z-index          : 2;
 
   &__box{
     &__left{
@@ -34,7 +34,6 @@ body{
 .index-main {
 	height          : 2000px;
 	text-align      : center;
-  // background-color: gold;
   padding-top     : 170px;
 }
 

@@ -1,14 +1,42 @@
+= stylesheet_link_tag    "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css"
+= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"
+
 .index-header#index-header
   .index-header__box
     .index-header__box__left
       初心者向け！筋トレのすすめ！
-    .index-header__box__center
+    %ul.index-header__box__center
+      %li.home-button
+        Home
+      %li.scroll-button
+        What_is
+      %li.scroll-button
+        サンプル3へ
     .index-header__box__right
 
 .index-main
   = render 'swiper'
+ 
+
+  -# .content
+  -#   サンプル1
+  -# .btn_top
+  -#   ページ上部へ
+  -# .content
+  -#   サンプル2
+  -# .btn_top
+  -#   ページ上部へ
+  -# .content
+  -#   サンプル3
+  -# .btn_top
+  -#   ページ上部へ
   = render 'index-main'
+
+
 .index-footer
+
+
+
 
 
 
@@ -28,4 +56,24 @@
   });	
 
 
-
+  $(function(){
+    // ページ内のスクロール処理
+    $('.scroll-button').click(function(){
+    // .btn_sampleをクリックした際に
+      var i = $('.scroll-button').index(this)
+      // クリックした番号(index)を取得し変数「i」に格納
+      var p = $('.content').eq(i).offset().top;
+      // 「i」に格納した番号と同じ番号のclass「content」の「top」の位置を取得
+      // 取得した「top」の位置は変数「p」に格納する
+      $('html,body').animate({scrollTop:p - 150},'fast');
+      return false;
+      // animateを使って変数「p」で取得した「top」の位置までスクロールする
+    });
+    // ページ上部へ移動する
+    $('.home-button').click(function(){
+      $('html,body').animate({scrollTop: 0},'fast');
+      return false;
+      // ページ上部へスクロールし戻る処理
+      // 特に位置情報を渡す必要はないためscrollTopの値を0とする
+    });
+  });
