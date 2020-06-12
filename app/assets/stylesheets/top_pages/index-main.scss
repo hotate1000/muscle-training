@@ -1,60 +1,209 @@
-@mixin text-form() {
+// テキスト内の文字
+@mixin letterbox-form() {
   color: white;
   text-align: left;
   font-family: "Sawarabi Mincho";
   letter-spacing: 4px;
 }
 
-
-.index-main__muscle-explanation {
+// 文字と画像の横並び
+@mixin index-main__muscle-explanation() {
   display: flex;
   justify-content: space-between;
-  padding: 40px 0px 20px 20px;
-  height: 1000px;
+  padding-top: 50px;
+}
 
+// 文字蘭のレイアウト(左側)
+@mixin index-main__muscle-explanation__letterbox-left(){
+  padding-left: 20px;
+  width: 50%;
+  min-width: 600px;
+}
+
+// 文字蘭のレイアウト(右側)
+@mixin 
+
+
+// ①筋トレってなに?メリットは!?
+.index-main__muscle-explanation {
+  @include index-main__muscle-explanation();
   &__letterbox {
-    width: 50%;
-    min-width: 600px;
-
+    @include index-main__muscle-explanation__letterbox-left();
     &__letter-top {
       .letterbox-top {
       // 説明欄タイト
-        @include text-form();
+        @include letterbox-form();
         letter-spacing: 4px;
         padding-bottom: 7px;
       }
-      
     }
     &__letter-center {
       .letterbox-center {
       // 説明蘭説明文
-        @include text-form();
+        @include letterbox-form();
         padding: 0 8px;
         line-height: 27px;
       }
     }
   }
-
   &__equipment-photobox {
     width: 45%;
-    
+    // order:1;
     &__photos {
+      justify-content: flex-start;
+    // 写真貼り付け
       height: 350px;
       width: 100%;
-      background: linear-gradient(-50deg, rgba(30, 45, 255, 0.1), rgba(250, 28, 28, 0.1)),url('kintore1.jpg');
+      background: linear-gradient(-50deg, rgba(30, 45, 255, 0.1), rgba(250, 28, 28, 0.1)),url('hatena.jpg');
       z-index: 2;
       background-size  :cover;  
     }
   }
 }
 
+// ②何をすればいいの!?
+.index-main__muscle-menu {
+  @include index-main__muscle-explanation();
+  &__letterbox {
+    padding-left: 20px;
+    // width: 50%;
+    width: 45%;
+    min-width: 600px;
+    &__letter-top {
+      .letterbox-top {
+      // 説明欄タイトletterbox-form
+        @include letterbox-form();
+        letter-spacing: 4px;
+        padding-bottom: 7px;
+      }
+    }
+    &__letter-center {
+      .letterbox-center {
+      // 説明蘭説明文
+        @include letterbox-form();
+        padding: 0 8px;
+        line-height: 27px;
+      }
+    }
+  }
+  &__equipment-photobox {
+    width: 45%;
+    width: 50%;
+    min-width: 600px;
+    // order:1;
+    &__photos {
+      justify-content: flex-start;
+    // 写真貼り付け
+      height: 350px;
+      width: 100%;
+      background: linear-gradient(-50deg, rgba(30, 45, 255, 0.1), rgba(250, 28, 28, 0.1)),url('hatena.jpg');
+      z-index: 2;
+      background-size  :cover;  
+    }
+  }
+}
+
+// ③食事方法①
+.index-main__meal-method1 {
+  @include index-main__muscle-explanation();
+  &__letterbox {
+    @include index-main__muscle-explanation__letterbox-left();
+    &__letter-top {
+      .letterbox-top {
+      // 説明欄タイト
+        @include letterbox-form();
+        letter-spacing: 4px;
+        padding-bottom: 7px;
+      }
+    }
+    &__letter-center {
+      .letterbox-center {
+      // 説明蘭説明文
+        @include letterbox-form();
+        padding: 0 8px;
+        line-height: 27px;
+      }
+    }
+  }
+  &__equipment-photobox {
+    width: 45%;
+    // order:1;
+    &__photos {
+      justify-content: flex-start;
+    // 写真貼り付け
+      height: 350px;
+      width: 100%;
+      background: linear-gradient(-50deg, rgba(30, 45, 255, 0.1), rgba(250, 28, 28, 0.1)),url('hatena.jpg');
+      z-index: 2;
+      background-size  :cover;  
+    }
+  }
+}
+
+// 食事方法②
+.index-main__meal-method2 {
+  @include index-main__muscle-explanation();
+  &__letterbox {
+    // order:2;
+    width: 50%;
+    min-width: 600px;
+    &__letter-top {
+      .letterbox-top {
+      // 説明欄タイト
+        @include letterbox-form();
+        letter-spacing: 4px;
+        padding-bottom: 7px;
+      }
+    }
+    &__letter-center {
+      .letterbox-center {
+      // 説明蘭説明文
+        @include letterbox-form();
+        padding: 0 8px;
+        line-height: 27px;
+      }
+    }
+  }
+  &__equipment-photobox {
+    width: 45%;
+    // order:1;
+    &__photos {
+      justify-content: flex-start;
+    // 写真貼り付け
+      height: 350px;
+      width: 100%;
+      background: linear-gradient(-50deg, rgba(30, 45, 255, 0.1), rgba(250, 28, 28, 0.1)),url('hatena.jpg');
+      z-index: 2;
+      background-size  :cover;  
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .fadein {
-  opacity : 0;
-  transform : translate(500px);
+  opacity    : 0;
+  transform  : translate(500px, 0);
   transition : all 1s;
 }
  
 .fadein.active{
-  opacity : 1;
-  transform : translate(0, 0);
+  opacity    : 1;
+  transform  : translate(0, 0);
 }
