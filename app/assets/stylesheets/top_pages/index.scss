@@ -1,18 +1,18 @@
+// トップページのホバー機能
 @mixin button-hover() {
-  transition: 0.3s;
-  background-color:rgb(0, 0, 0);
-  opacity:0.8;
-  color: white;
+  transition        : 0.3s;
+  background-color  :rgb(0, 0, 0);
+  opacity           :0.8;
+  color             : white;
 }
 
 body{
-  background-color : rgb(50, 50, 50);
+  background-color  : rgb(50, 50, 50);
 }
 
 .index-header{
   position          : fixed;
   padding           : 0 200px;
-  // font-size: 20px;
   width             : 100%;
   text-align        : center;
   color             : black;
@@ -20,15 +20,14 @@ body{
   transition        : .5s;
   font-family       : 'ヒラギノ丸ゴ ProN W4';
   z-index           : 2;
-  
+
   &__box{
     display         : flex;
-    
     &__left{
       font-size     : 25px;
     }
     &__center{
-      display: flex;
+      display       : flex;
       align-items   : center;
       font-size     : 20px;
       .home-button{
@@ -38,11 +37,12 @@ body{
         @include button-hover();
       }
       .scroll-button{
-        padding:30px 16px;
+        padding     :30px 16px;
       }
       .scroll-button:hover{
         @include button-hover();
       }
+      // スクロール時のヘッダーのサイズ
       .scroll-header{
         font-size   :15px;
         padding     :15px 16px;
@@ -54,17 +54,18 @@ body{
     }   
   }
 }
-.index-header-resize {
-  padding          : 0 200px;
-  font-size        : 15px;
-}
+// .index-header-resize {
+//   padding          : 0 200px;
+//   font-size        : 15px;
+// }
 
+// ヘッダーとトップページの隙間
 .index-main {
-	// height          : 2000px;
 	text-align       : center;
   padding-top      : 170px;
 }
 
+// フッター
 .index-footer {
 	padding          : 30px 0;
   text-align       : center;

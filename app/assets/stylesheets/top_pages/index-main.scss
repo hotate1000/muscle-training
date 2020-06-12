@@ -7,53 +7,50 @@
 
 // 文字蘭のレイアウト
 @mixin index-main__muscle-explanation__letterbox(){
-  padding-left    : 20px;
+  padding         : 0 30px;
   width           : 50%;
   min-width       : 600px;
 }
 
-
-
 // 説明蘭タイトル
 @mixin letterbox-top(){
   color           : white;
-  text-align      : left;
+  text-align      : center;
+  font-size       : 25px;
   font-family     : "Sawarabi Mincho";
   letter-spacing  : 4px;
-  padding-bottom  : 7px;
+  padding-bottom  : 12px;
 }
 
-
-
+// 説明蘭本文
 @mixin letterbox-center(){
   color           : white;
   text-align      : left;
+  font-size       : 17px;
   font-family     : "Sawarabi Mincho";
   letter-spacing  : 4px;
-  padding         : 0 8px;
+  // padding         : 0 8px;
   line-height     : 27px;
 }
 
-
-
 // 画像サイズの幅(右)
 @mixin index-main__muscle-explanation__equipment-photobox-left(){
-  width: 45%;
+  width           : 45%;
 }
 
 // 画像サイズの幅(左)
 @mixin index-main__muscle-explanation__equipment-photobox-right(){
-  width: 45%;
-  min-width: 600px;
+  width           : 45%;
+  min-width       : 600px;
 }
 
 // 画像サイズの大きさ
 @mixin index-main__muscle-explanation__equipment-photobox__photos(){
-  justify-content: flex-start;
-  height: 350px;
-  width: 100%;
-  z-index: 2;
-  background-size  :cover;  
+  justify-content : flex-start;
+  height          : 350px;
+  width           : 100%;
+  z-index         : 2;
+  background-size :cover;  
 }
 
 
@@ -164,23 +161,6 @@
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .fadein {
