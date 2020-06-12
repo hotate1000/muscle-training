@@ -1,11 +1,3 @@
-// テキスト内の文字
-@mixin letterbox-form() {
-  color           : white;
-  text-align      : left;
-  font-family     : "Sawarabi Mincho";
-  letter-spacing  : 4px;
-}
-
 // 文字と画像の横並び
 @mixin index-main__muscle-explanation() {
   display         : flex;
@@ -19,6 +11,30 @@
   width           : 50%;
   min-width       : 600px;
 }
+
+
+
+// 説明蘭タイトル
+@mixin letterbox-top(){
+  color           : white;
+  text-align      : left;
+  font-family     : "Sawarabi Mincho";
+  letter-spacing  : 4px;
+  padding-bottom  : 7px;
+}
+
+
+
+@mixin letterbox-center(){
+  color           : white;
+  text-align      : left;
+  font-family     : "Sawarabi Mincho";
+  letter-spacing  : 4px;
+  padding         : 0 8px;
+  line-height     : 27px;
+}
+
+
 
 // 画像サイズの幅(右)
 @mixin index-main__muscle-explanation__equipment-photobox-left(){
@@ -42,6 +58,9 @@
 
 
 
+
+
+
 // ①筋トレってなに?メリットは!?
 .index-main__muscle-explanation {
   @include index-main__muscle-explanation();
@@ -49,18 +68,12 @@
     @include index-main__muscle-explanation__letterbox();
     &__letter-top {
       .letterbox-top {
-      // 説明欄タイト
-        @include letterbox-form();
-        letter-spacing: 4px;
-        padding-bottom: 7px;
+        @include letterbox-top();
       }
     }
     &__letter-center {
       .letterbox-center {
-      // 説明蘭説明文
-        @include letterbox-form();
-        padding: 0 8px;
-        line-height: 27px;
+        @include letterbox-center();
       }
     }
   }
@@ -82,18 +95,12 @@
     @include index-main__muscle-explanation__letterbox();
     &__letter-top {
       .letterbox-top {
-      // 説明欄タイトletterbox-form
-        @include letterbox-form();
-        letter-spacing: 4px;
-        padding-bottom: 7px;
+        @include letterbox-top();
       }
     }
     &__letter-center {
       .letterbox-center {
-      // 説明蘭説明文
-        @include letterbox-form();
-        padding: 0 8px;
-        line-height: 27px;
+        @include letterbox-center();
       }
     }
   }
@@ -114,18 +121,12 @@
     @include index-main__muscle-explanation__letterbox();
     &__letter-top {
       .letterbox-top {
-      // 説明欄タイト
-        @include letterbox-form();
-        letter-spacing: 4px;
-        padding-bottom: 7px;
+        @include letterbox-top();
       }
     }
     &__letter-center {
       .letterbox-center {
-      // 説明蘭説明文
-        @include letterbox-form();
-        padding: 0 8px;
-        line-height: 27px;
+        @include letterbox-center();
       }
     }
   }
@@ -146,18 +147,12 @@
     @include index-main__muscle-explanation__letterbox();
     &__letter-top {
       .letterbox-top {
-      // 説明欄タイト
-        @include letterbox-form();
-        letter-spacing: 4px;
-        padding-bottom: 7px;
+        @include letterbox-top();
       }
     }
     &__letter-center {
       .letterbox-center {
-      // 説明蘭説明文
-        @include letterbox-form();
-        padding: 0 8px;
-        line-height: 27px;
+        @include letterbox-center();
       }
     }
   }
