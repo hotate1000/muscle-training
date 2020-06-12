@@ -22,28 +22,9 @@
 .index-main
   %p 初心者向け！筋トレのすすめ！
   = render 'swiper'
- 
-
-  -# .content
-  -#   サンプル1
-  -# .btn_top
-  -#   ページ上部へ
-  -# .content
-  -#   サンプル2
-  -# .btn_top
-  -#   ページ上部へ
-  -# .content
-  -#   サンプル3
-  -# .btn_top
-  -#   ページ上部へ
   = render 'index-main'
 
-
 .index-footer
-
-
-
-
 
 
 :javascript
@@ -62,7 +43,6 @@
     });
   });	
 
-
   $(function(){
     // ヘッダーにあるスクロールボタン
     $('.scroll-button').click(function(){
@@ -72,7 +52,7 @@
       var p = $('.content').eq(i).offset().top;
       // 「i」に格納した番号と同じ番号のclass「content」の「top」の位置を取得
       // 取得した「top」の位置は変数「p」に格納する
-      $('html,body').animate({scrollTop:p - 150},'fast');
+      $('html,body').animate({scrollTop:p - 100},'fast');
       return false;
       // animateを使って変数「p」で取得した「top」の位置までスクロールする
     });

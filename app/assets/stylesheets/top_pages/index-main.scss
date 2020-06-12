@@ -35,12 +35,14 @@
 
 // 画像サイズの幅(右)
 @mixin index-main__muscle-explanation__equipment-photobox-left(){
+  padding-top     : 50px;
   width           : 45%;
   overflow        : hidden;
 }
 
 // 画像サイズの幅(左)
 @mixin index-main__muscle-explanation__equipment-photobox-right(){
+  padding-top     : 50px;
   width           : 45%;
   min-width       : 600px;
   overflow        : hidden;
