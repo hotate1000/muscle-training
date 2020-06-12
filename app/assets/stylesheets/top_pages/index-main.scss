@@ -36,12 +36,14 @@
 // 画像サイズの幅(右)
 @mixin index-main__muscle-explanation__equipment-photobox-left(){
   width           : 45%;
+  overflow        : hidden;
 }
 
 // 画像サイズの幅(左)
 @mixin index-main__muscle-explanation__equipment-photobox-right(){
   width           : 45%;
   min-width       : 600px;
+  overflow        : hidden;
 }
 
 // 画像サイズの大きさ
@@ -163,13 +165,25 @@
 }
 
 
-.fadein {
+.fadein-right {
   opacity    : 0;
-  transform  : translate(500px, 0);
+  transform  : translate(500px,0);
   transition : all 1s;
 }
  
-.fadein.active{
+.fadein-right.active-right{
+  opacity    : 1;
+  transform  : translate(0, 0);
+}
+
+
+.fadein-left {
+  opacity    : 0;
+  transform  : translate(-500px, 0);
+  transition : all 1s;
+}
+ 
+.fadein-left.active-left{
   opacity    : 1;
   transform  : translate(0, 0);
 }

@@ -1,4 +1,4 @@
--# 筋トレってなに?メリットは!?
+-# ①筋トレってなに?メリットは!?
 .index-main__muscle-explanation
   .index-main__muscle-explanation__letterbox
     .index-main__muscle-explanation__letterbox__letter-top
@@ -12,14 +12,14 @@
       %p.letterbox-center 
         メリットは「代謝の促進」「ストレスの耐性の向上」「体力の向上」などなど健康的な生活を意地することを助けてくれる効果があります。
   .index-main__muscle-explanation__equipment-photobox
-    .index-main__muscle-explanation__equipment-photobox__photos.fadein
-      -# = image_tag 'kintore1', alt: '', height: '200px', width: '90%', class: 'fadein'
+    .index-main__muscle-explanation__equipment-photobox__photos.fadein-right
+      -# = image_tag 'kintore1', alt: '', height: '200px', width: '90%', class: 'fadein-right'
 
 
--# 何をすればいいの!?
+-# ②何をすればいいの!?
 .index-main__muscle-menu
   .index-main__muscle-menu__equipment-photobox
-    .index-main__muscle-menu__equipment-photobox__photos.fadein
+    .index-main__muscle-menu__equipment-photobox__photos.fadein-left
   .index-main__muscle-menu__letterbox
     .index-main__muscle-menu__letterbox__letter-top
       %p.letterbox-top.scroll-button.content
@@ -34,7 +34,7 @@
 
 
 
--# 食事方法①
+-# ③食事方法①
 .index-main__meal-method1
   .index-main__meal-method1__letterbox
     .index-main__meal-method1__letterbox__letter-top
@@ -52,11 +52,13 @@
       %p.letterbox-center 
         (1日に摂取した(糖質1gあたり×4 + 脂質1gあたり×9 + タンパク質1gあたり×4)) - (1日に必要な推定エネルギー必要量)が+だと太り、-だと痩せていきます。
   .index-main__meal-method1__equipment-photobox
-    .index-main__meal-method1__equipment-photobox__photos.fadein
+    .index-main__meal-method1__equipment-photobox__photos.fadein-right
 
 
 -# 食事方法②
 .index-main__meal-method2
+  .index-main__meal-method2__equipment-photobox
+    .index-main__meal-method2__equipment-photobox__photos.fadein-left
   .index-main__meal-method2__letterbox
     .index-main__meal-method2__letterbox__letter-top
       %p.letterbox-top.scroll-button.content
@@ -72,15 +74,14 @@
         結果、ガリガリの体型になり、筋肉量が少ないためダイエット後にリバウンドしやすくなります。
       %p.letterbox-center 
         個人的な考えですが、腕立て・スクワット程度の筋トレでしたらタンパク質は1日当たり「自分の体重×1.2(g)」程度摂取すると良いと思います。
-  .index-main__meal-method2__equipment-photobox
-    .index-main__meal-method2__equipment-photobox__photos.fadein
 
 
 :javascript
   $(function(){
+  // スクロール時に右から画像を表示
     $(window).scroll(function (){
     // スクロール時に反応する
-        $('.fadein').each(function(){
+        $('.fadein-right').each(function(){
         // .fadein要素1つずつに順番に処理を行う
           var position = $(this).offset().top;
           // offset().topで、ページの最上部から「.fadein」が付いた要素までの距離を取得して、変数positionに代入
@@ -91,8 +92,22 @@
           if (scroll > position - windowHeight + 250){
           // スクロール量が、「ページ最上部から要素までの距離」-「ウィンドウの高さ」を超えた時、つまりスクロール量が
           // 要素の位置を過ぎた瞬間、「.fadein」が付いた要素にactiveクラスが付く。
-            $(this).addClass('active');
+            $(this).addClass('active-right');
           }
         });
+    });
+  });
+
+  $(function(){
+  // スクロール時に左から画像を表示
+    $(window).scroll(function (){
+      $('.fadein-left').each(function(){
+        var position = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll > position - windowHeight + 250){
+          $(this).addClass('active-left');
+        }
+      });
     });
   });

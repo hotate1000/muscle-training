@@ -1,3 +1,6 @@
+#swiper-container {
+  padding: 10px 0 30px 0;
+}
 
 /* 4の倍数＋1枚目のスライドの高さ（1枚目、5枚目…） */
 .swiper-slide:nth-child(4n+1) {

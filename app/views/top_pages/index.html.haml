@@ -4,17 +4,23 @@
 .index-header#index-header
   .index-header__box
     .index-header__box__left
-      -# 初心者向け！筋トレのすすめ！
     %ul.index-header__box__center
       %li.home-button
         Home
       %li.scroll-button
-        What_is
+        %p merit
       %li.scroll-button
-        サンプル3へ
+        %p What to do?
+      %li.scroll-button
+        %p calorie
+      %li.scroll-button
+        %p protein
+      %li.scroll-button
+        %p finally
     .index-header__box__right
 
 .index-main
+  %p 初心者向け！筋トレのすすめ！
   = render 'swiper'
  
 
@@ -42,7 +48,7 @@
 
 :javascript
   $(function() {
-  // トップページヘッダースクロール
+  // トップページヘッダースクロールサイズ変更
     $(window).on('load scroll', function() {
       // ページ読み込み時とスクロール時に発火させる。
       var scrollPos = $(this).scrollTop();
@@ -58,7 +64,7 @@
 
 
   $(function(){
-    // ページ内のスクロール処理
+    // ヘッダーにあるスクロールボタン
     $('.scroll-button').click(function(){
     // .btn_sampleをクリックした際に
       var i = $('.scroll-button').index(this)
