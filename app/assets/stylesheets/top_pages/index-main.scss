@@ -1,34 +1,52 @@
 // テキスト内の文字
 @mixin letterbox-form() {
-  color: white;
-  text-align: left;
-  font-family: "Sawarabi Mincho";
-  letter-spacing: 4px;
+  color           : white;
+  text-align      : left;
+  font-family     : "Sawarabi Mincho";
+  letter-spacing  : 4px;
 }
 
 // 文字と画像の横並び
 @mixin index-main__muscle-explanation() {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 50px;
+  display         : flex;
+  justify-content : space-between;
+  padding         : 50px 0 50px 0;
 }
 
-// 文字蘭のレイアウト(左側)
-@mixin index-main__muscle-explanation__letterbox-left(){
-  padding-left: 20px;
-  width: 50%;
+// 文字蘭のレイアウト
+@mixin index-main__muscle-explanation__letterbox(){
+  padding-left    : 20px;
+  width           : 50%;
+  min-width       : 600px;
+}
+
+// 画像サイズの幅(右)
+@mixin index-main__muscle-explanation__equipment-photobox-left(){
+  width: 45%;
+}
+
+// 画像サイズの幅(左)
+@mixin index-main__muscle-explanation__equipment-photobox-right(){
+  width: 45%;
   min-width: 600px;
 }
 
-// 文字蘭のレイアウト(右側)
-@mixin 
+// 画像サイズの大きさ
+@mixin index-main__muscle-explanation__equipment-photobox__photos(){
+  justify-content: flex-start;
+  height: 350px;
+  width: 100%;
+  z-index: 2;
+  background-size  :cover;  
+}
+
 
 
 // ①筋トレってなに?メリットは!?
 .index-main__muscle-explanation {
   @include index-main__muscle-explanation();
   &__letterbox {
-    @include index-main__muscle-explanation__letterbox-left();
+    @include index-main__muscle-explanation__letterbox();
     &__letter-top {
       .letterbox-top {
       // 説明欄タイト
@@ -47,16 +65,11 @@
     }
   }
   &__equipment-photobox {
-    width: 45%;
+    @include index-main__muscle-explanation__equipment-photobox-left();
     // order:1;
     &__photos {
-      justify-content: flex-start;
-    // 写真貼り付け
-      height: 350px;
-      width: 100%;
       background: linear-gradient(-50deg, rgba(30, 45, 255, 0.1), rgba(250, 28, 28, 0.1)),url('hatena.jpg');
-      z-index: 2;
-      background-size  :cover;  
+      @include index-main__muscle-explanation__equipment-photobox__photos();
     }
   }
 }
@@ -65,10 +78,8 @@
 .index-main__muscle-menu {
   @include index-main__muscle-explanation();
   &__letterbox {
-    padding-left: 20px;
-    // width: 50%;
-    width: 45%;
-    min-width: 600px;
+    // order:2;
+    @include index-main__muscle-explanation__letterbox();
     &__letter-top {
       .letterbox-top {
       // 説明欄タイトletterbox-form
@@ -87,18 +98,11 @@
     }
   }
   &__equipment-photobox {
-    width: 45%;
-    width: 50%;
-    min-width: 600px;
+    @include index-main__muscle-explanation__equipment-photobox-right();
     // order:1;
     &__photos {
-      justify-content: flex-start;
-    // 写真貼り付け
-      height: 350px;
-      width: 100%;
       background: linear-gradient(-50deg, rgba(30, 45, 255, 0.1), rgba(250, 28, 28, 0.1)),url('hatena.jpg');
-      z-index: 2;
-      background-size  :cover;  
+      @include index-main__muscle-explanation__equipment-photobox__photos();
     }
   }
 }
@@ -107,7 +111,7 @@
 .index-main__meal-method1 {
   @include index-main__muscle-explanation();
   &__letterbox {
-    @include index-main__muscle-explanation__letterbox-left();
+    @include index-main__muscle-explanation__letterbox();
     &__letter-top {
       .letterbox-top {
       // 説明欄タイト
@@ -126,16 +130,10 @@
     }
   }
   &__equipment-photobox {
-    width: 45%;
-    // order:1;
+    @include index-main__muscle-explanation__equipment-photobox-left();
     &__photos {
-      justify-content: flex-start;
-    // 写真貼り付け
-      height: 350px;
-      width: 100%;
       background: linear-gradient(-50deg, rgba(30, 45, 255, 0.1), rgba(250, 28, 28, 0.1)),url('hatena.jpg');
-      z-index: 2;
-      background-size  :cover;  
+      @include index-main__muscle-explanation__equipment-photobox__photos();
     }
   }
 }
@@ -144,9 +142,8 @@
 .index-main__meal-method2 {
   @include index-main__muscle-explanation();
   &__letterbox {
-    // order:2;
-    width: 50%;
-    min-width: 600px;
+    order:2;
+    @include index-main__muscle-explanation__letterbox();
     &__letter-top {
       .letterbox-top {
       // 説明欄タイト
@@ -165,16 +162,10 @@
     }
   }
   &__equipment-photobox {
-    width: 45%;
-    // order:1;
+    @include index-main__muscle-explanation__equipment-photobox-right();
     &__photos {
-      justify-content: flex-start;
-    // 写真貼り付け
-      height: 350px;
-      width: 100%;
       background: linear-gradient(-50deg, rgba(30, 45, 255, 0.1), rgba(250, 28, 28, 0.1)),url('hatena.jpg');
-      z-index: 2;
-      background-size  :cover;  
+      @include index-main__muscle-explanation__equipment-photobox__photos();
     }
   }
 }
