@@ -82,7 +82,7 @@
     @include index-main__muscle-explanation__equipment-photobox-left();
     // order:1;
     &__photos {
-      background: linear-gradient(-50deg, rgba(30, 45, 255, 0.1), rgba(250, 28, 28, 0.1)),url('hatena.jpg');
+      background: url('hatena.jpg');
       @include index-main__muscle-explanation__equipment-photobox__photos();
     }
   }
@@ -109,7 +109,7 @@
     @include index-main__muscle-explanation__equipment-photobox-right();
     // order:1;
     &__photos {
-      background: linear-gradient(-50deg, rgba(30, 45, 255, 0.1), rgba(250, 28, 28, 0.1)),url('hatena.jpg');
+      background: url('training-equipment.jpg');
       @include index-main__muscle-explanation__equipment-photobox__photos();
     }
   }
@@ -134,7 +134,7 @@
   &__equipment-photobox {
     @include index-main__muscle-explanation__equipment-photobox-left();
     &__photos {
-      background: linear-gradient(-50deg, rgba(30, 45, 255, 0.1), rgba(250, 28, 28, 0.1)),url('hatena.jpg');
+      background: url('calorie.jpg');
       @include index-main__muscle-explanation__equipment-photobox__photos();
     }
   }
@@ -160,7 +160,7 @@
   &__equipment-photobox {
     @include index-main__muscle-explanation__equipment-photobox-right();
     &__photos {
-      background: linear-gradient(-50deg, rgba(30, 45, 255, 0.1), rgba(250, 28, 28, 0.1)),url('hatena.jpg');
+      background: url('protein.jpg');
       @include index-main__muscle-explanation__equipment-photobox__photos();
     }
   }

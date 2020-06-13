@@ -24,7 +24,6 @@ body{
   &__box{
     display         : flex;
     &__left{
-      font-size     : 25px;
     }
     &__center{
       margin        : 0 auto;
@@ -33,10 +32,11 @@ body{
       font-size     : 22px;
       font-weight   : bold;
       .home-button{
-        padding     :35px 20px;
+        padding     :37px 20px;
         transition  : 0.3s;
       }
       .home-button:hover{
+        // トップヘッダーホバー機能
         @include button-hover();
       }
       .scroll-button{
@@ -44,10 +44,11 @@ body{
         transition  : 0.3s;
       }
       .scroll-button:hover{
+        // トップヘッダーホバー機能
         @include button-hover();
       }
-      // スクロール時のヘッダーのサイズ
       .scroll-header{
+      // スクロール時のヘッダーのサイズ
         font-size   :18px;
         padding     :17px 20px;
         font-weight : bold;
