@@ -60,8 +60,6 @@
 
 
 
-
-
 // ①筋トレってなに?メリットは!?
 .index-main__muscle-explanation {
   @include index-main__muscle-explanation();
@@ -168,8 +166,9 @@
 
 // 最後に
 .index-main__last-message {
-  padding : 100px;
+  padding : 50px 100px 20px 100px;
   &__letterbox {
+    min-width: 1200px;
     &__letter-top {
       .letterbox-top {
         @include letterbox-top();
@@ -178,13 +177,21 @@
     &__letter-center {
       .letterbox-center {
         @include letterbox-center();
+        text-align: center;
       }
     }
   }
   &__equipment-photobox {
-
+    display: flex;
+    justify-content: center;
+    min-width: 1600px;
     &__photos {
-
+      height: 300px;
+      width: 230px;
+    }
+    .photos{
+      height: 100%;
+      width: 100%;
     }
   }
 }

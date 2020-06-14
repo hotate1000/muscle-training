@@ -61,10 +61,10 @@ body{
   }
 }
 
-// ヘッダーとトップページの隙間
+// ロゴの位置
 .index-main {
 	text-align       : center;
-  padding-top      : 130px;
+  padding-top      : 125px;
   color            : white;
   font-size        : 25px;
   font-family      : 'ヒラギノ丸ゴ ProN W4';
@@ -75,7 +75,7 @@ body{
     }
     &__letter{
       padding-left : 20px;
-      line-height  : 80px;
+      line-height  : 90px;
     }
   }
 }

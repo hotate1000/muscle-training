@@ -13,7 +13,7 @@
         メリットは「代謝の促進」「ストレスの耐性の向上」「体力の向上」などなど健康的な生活を維持することを助けてくれる効果があります。
   .index-main__muscle-explanation__equipment-photobox
     .index-main__muscle-explanation__equipment-photobox__photos.fadein-right
-      -# = image_tag 'kintore1', alt: '', height: '200px', width: '90%', class: 'fadein-right'
+      -# = image_tag 'kintore1', alt: '',', class: 'fadein-right'
 
 
 -# ②何をすればいいの!?
@@ -91,7 +91,7 @@
     .index-main__last-message__letterbox__letter-top
       %p.letterbox-top.content
         最後に！
-    .index-main__meal-method2__letterbox__letter-center
+    .index-main__last-message__letterbox__letter-center
       %p.letterbox-center 
         筋トレを初めてしっかりと体に変化が現れるまで3ヶ月程度かかるためモチベーション維持は大切です。
       %p.letterbox-center 
@@ -100,11 +100,21 @@
         特に芸人の筋トレYouTuber?がオススメで、話が上手く凄く勉強になります。
       %p.letterbox-center 
         皆さんも筋トレをして健康的な体を手に入れましょう！！
-      
-
-  -# .index-main__last-message__equipment-photobox
-  -#   .index-main__last-message__equipment-photobox__photos.fadein-left
-
+.index-main__last-message__equipment-photobox
+  .index-main__last-message__equipment-photobox__photos.fadein-left-2
+    = image_tag 'man1.jpg'           , alt: '', class: 'photos'
+  .index-main__last-message__equipment-photobox__photos.fadein-left-2
+    = image_tag 'woman2.jpg'         , alt: '', class: 'photos'
+  .index-main__last-message__equipment-photobox__photos.fadein-left-2
+    = image_tag 'animal-kangaroo.jpg', alt: '', class: 'photos'
+  .index-main__last-message__equipment-photobox__photos.fadein-left-2
+    = image_tag 'man2.jpg'           , alt: '', class: 'photos'
+  .index-main__last-message__equipment-photobox__photos.fadein-left-2
+    = image_tag 'woman1.jpg'         , alt: '', class: 'photos'
+  .index-main__last-message__equipment-photobox__photos.fadein-left-2
+    = image_tag 'animal-gorilla.jpg' , alt: '', class: 'photos'
+  .index-main__last-message__equipment-photobox__photos.fadein-left-2
+    = image_tag 'man3.jpg'           , alt: '', class: 'photos'
 :javascript
   $(function(){
   // スクロール時に右から画像を表示
@@ -116,8 +126,7 @@
           // offset().topで、ページの最上部から「.fadein」が付いた要素までの距離を取得して、変数positionに代入
           var scroll = $(window).scrollTop();
           // スクロースした量を取得する
-          var windowHeight = $(window).height();
-          // .height()で、ウィンドウの高さを取得して、変数windowHeightに代入
+          var windowHeight = $(window)ndowHeightに代入
           if (scroll > position - windowHeight + 250){
           // スクロール量が、「ページ最上部から要素までの距離」-「ウィンドウの高さ」を超えた時、つまりスクロール量が
           // 要素の位置を過ぎた瞬間、「.fadein」が付いた要素にactiveクラスが付く。
@@ -133,8 +142,7 @@
       $('.fadein-left').each(function(){
         var position = $(this).offset().top;
         var scroll = $(window).scrollTop();
-        var windowHeight = $(window).height();
-        if (scroll > position - windowHeight + 250){
+        var windowHeight = $(window) > position - windowHeight + 250){
           $(this).addClass('active-left');
         }
       });
