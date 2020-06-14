@@ -52,3 +52,6 @@ production:
   database: muscle-training_production
   username: muscle-training
   password: <%= ENV['MUSCLE-TRAINING_DATABASE_PASSWORD'] %>
+  adapter: postgresql 
+  encoding: unicode 
+  pool: 5

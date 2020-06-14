@@ -70,3 +70,8 @@ gem 'jquery-rails'
 # jqueryの実証
 gem 'pry-rails'
 # デバック用
+
+
+group :production do
+  gem 'pg'
+end
