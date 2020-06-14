@@ -13,8 +13,6 @@
         メリットは「代謝の促進」「ストレスの耐性の向上」「体力の向上」などなど健康的な生活を維持することを助けてくれる効果があります。
   .index-main__muscle-explanation__equipment-photobox
     .index-main__muscle-explanation__equipment-photobox__photos.fadein-right
-      -# = image_tag 'kintore1', alt: '',', class: 'fadein-right'
-
 
 -# ②何をすればいいの!?
 .index-main__muscle-menu
@@ -35,7 +33,6 @@
         もっと高負荷をかけたい方は「アブローラ(腹筋用器具)」や「プッシュアップバー(腕立用器具)」を購入してみたり、ジムに通うと良いです。
       %p.letterbox-center 
         ただ、腹筋を割る程度ならジムに通わず「腕立て伏せ」「スクワット」「アブローラ」を行うだけで十分にいけます！！
-
 
 -# ③食事方法①
 .index-main__meal-method1
@@ -61,7 +58,6 @@
   .index-main__meal-method1__equipment-photobox
     .index-main__meal-method1__equipment-photobox__photos.fadein-right
 
-
 -# 食事方法②
 .index-main__meal-method2
   .index-main__meal-method2__equipment-photobox
@@ -85,7 +81,8 @@
         よって、1度の食事で一気に摂取するのでは無くプロテインなども活用し3〜4回に分け1回あたり15g〜30gを目安に摂取すると良いです。
       %p.letterbox-center
         たまにプロテインを筋肉を増やす薬と勘違している方がいますが、あれはただのタンパク質の塊です!
-      
+
+-# 最後に
 .index-main__last-message
   .index-main__last-message__letterbox
     .index-main__last-message__letterbox__letter-top
@@ -101,23 +98,26 @@
       %p.letterbox-center 
         皆さんも筋トレをして健康的な体を手に入れましょう！！
 .index-main__last-message__equipment-photobox
-  .index-main__last-message__equipment-photobox__photos.fadein-left-2
+  .index-main__last-message__equipment-photobox__photos.fadein-under1
     = image_tag 'man1.jpg'           , alt: '', class: 'photos'
-  .index-main__last-message__equipment-photobox__photos.fadein-left-2
+  .index-main__last-message__equipment-photobox__photos.fadein-under2
     = image_tag 'woman2.jpg'         , alt: '', class: 'photos'
-  .index-main__last-message__equipment-photobox__photos.fadein-left-2
+  .index-main__last-message__equipment-photobox__photos.fadein-under3
     = image_tag 'animal-kangaroo.jpg', alt: '', class: 'photos'
-  .index-main__last-message__equipment-photobox__photos.fadein-left-2
+  .index-main__last-message__equipment-photobox__photos.fadein-under4
     = image_tag 'man2.jpg'           , alt: '', class: 'photos'
-  .index-main__last-message__equipment-photobox__photos.fadein-left-2
+  .index-main__last-message__equipment-photobox__photos.fadein-under5
     = image_tag 'woman1.jpg'         , alt: '', class: 'photos'
-  .index-main__last-message__equipment-photobox__photos.fadein-left-2
+  .index-main__last-message__equipment-photobox__photos.fadein-under6
     = image_tag 'animal-gorilla.jpg' , alt: '', class: 'photos'
-  .index-main__last-message__equipment-photobox__photos.fadein-left-2
+  .index-main__last-message__equipment-photobox__photos.fadein-under7
     = image_tag 'man3.jpg'           , alt: '', class: 'photos'
+
+
+
 :javascript
-  $(function(){
   // スクロール時に右から画像を表示
+  $(function(){
     $(window).scroll(function (){
     // スクロール時に反応する
         $('.fadein-right').each(function(){
@@ -126,7 +126,8 @@
           // offset().topで、ページの最上部から「.fadein」が付いた要素までの距離を取得して、変数positionに代入
           var scroll = $(window).scrollTop();
           // スクロースした量を取得する
-          var windowHeight = $(window)ndowHeightに代入
+          var windowHeight = $(window).height();
+          // .height()で、ウィンドウの高さを取得して、変数windowHeightに代入
           if (scroll > position - windowHeight + 250){
           // スクロール量が、「ページ最上部から要素までの距離」-「ウィンドウの高さ」を超えた時、つまりスクロール量が
           // 要素の位置を過ぎた瞬間、「.fadein」が付いた要素にactiveクラスが付く。
@@ -136,14 +137,109 @@
     });
   });
 
-  $(function(){
   // スクロール時に左から画像を表示
+  $(function(){
     $(window).scroll(function (){
       $('.fadein-left').each(function(){
         var position = $(this).offset().top;
         var scroll = $(window).scrollTop();
-        var windowHeight = $(window) > position - windowHeight + 250){
+        var windowHeight = $(window).height();
+        if (scroll > position - windowHeight + 250){
           $(this).addClass('active-left');
+        }
+      });
+    });
+  });
+
+
+
+  // スクロール時に下から画像を表示
+  $(function(){
+    $(window).scroll(function (){
+      $('.fadein-under1').each(function(){
+        var position = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll > position - windowHeight + 0){
+          $(this).addClass('active-under');
+        }
+      });
+    });
+  });
+
+  $(function(){
+    $(window).scroll(function (){
+      $('.fadein-under2').each(function(){
+        var position = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll > position - windowHeight + 0){
+          $(this).addClass('active-under');
+        }
+      });
+    });
+  });
+
+  $(function(){
+    $(window).scroll(function (){
+      $('.fadein-under3').each(function(){
+        var position = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll > position - windowHeight + 0){
+          $(this).addClass('active-under');
+        }
+      });
+    });
+  });
+
+  $(function(){
+    $(window).scroll(function (){
+      $('.fadein-under4').each(function(){
+        var position = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll > position - windowHeight + 0){
+          $(this).addClass('active-under');
+        }
+      });
+    });
+  });
+
+  $(function(){
+    $(window).scroll(function (){
+      $('.fadein-under5').each(function(){
+        var position = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll > position - windowHeight + 0){
+          $(this).addClass('active-under');
+        }
+      });
+    });
+  });
+
+  $(function(){
+    $(window).scroll(function (){
+      $('.fadein-under6').each(function(){
+        var position = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll > position - windowHeight + 0){
+          $(this).addClass('active-under');
+        }
+      });
+    });
+  });
+
+  $(function(){
+    $(window).scroll(function (){
+      $('.fadein-under7').each(function(){
+        var position = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll > position - windowHeight + 0){
+          $(this).addClass('active-under');
         }
       });
     });

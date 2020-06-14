@@ -20,6 +20,7 @@ body{
   transition        : .5s;
   font-family       : 'ヒラギノ丸ゴ ProN W4';
   z-index           : 2;
+  white-space       : nowrap;
 
   &__box{
     display         : flex;
