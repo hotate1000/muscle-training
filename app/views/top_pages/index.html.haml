@@ -6,7 +6,7 @@
     .index-header__box__left
     %ul.index-header__box__center
       %li.home-button
-        Home
+        %p Home
       %li.scroll-button
         %p merit
       %li.scroll-button
@@ -33,7 +33,7 @@
 
 :javascript
   $(function() {
-  // トップページヘッダースクロールサイズ変更
+  // トップページヘッダー、スクロール時サイズ変更
     $(window).on('load scroll', function() {
       // ページ読み込み時とスクロール時に発火させる。
       var scrollPos = $(this).scrollTop();
