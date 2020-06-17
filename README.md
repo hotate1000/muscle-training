@@ -1,24 +1,13 @@
-# README
+# 概要
+  未経験者、初心者向けに筋トレの内容を纏めたものです。<br>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 制作経緯
+  動きのあるサイトを作成したみたかったため作成しました。<br>
+  体を健康に興味があったため、筋トレの内容を纏めまた。<br>
 
-Things you may want to cover:
+# 動き
+  ### スクロールするとヘッダーが変更させる
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  ### 時間をおこと画像が変わる
+  
+  ### スクロールすると画像が表示させる
